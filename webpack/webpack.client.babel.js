@@ -2,6 +2,8 @@ import AssetsPlugin from 'assets-webpack-plugin';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import WebpackMd5Hash from 'webpack-md5-hash';
 import webpack from 'webpack';
+import postcssImport from 'postcss-import';
+import cssnext from 'postcss-cssnext';
 
 import common, {
   babelLoaderOptions,
@@ -38,7 +40,13 @@ export default {
               options: {
                 plugins() {
                   return [
-                    require('postcss-cssnext'), // eslint-disable-line global-require
+                    postcssImport,
+                    cssnext({
+                      browsers: ['last 2 versions', '> 5%'],
+                      features: {
+                        customProperties: {},
+                      },
+                    }),
                   ];
                 },
               },

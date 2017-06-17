@@ -20,7 +20,8 @@
     "eslint-config-airbnb": "14.1.0",
     "eslint-plugin-import": "2.2.0",
     "eslint-plugin-jsx-a11y": "4.0.0",
-    "eslint-plugin-react": "6.10.0"
+    "eslint-plugin-react": "6.10.0",
+    "postcss-import": "^10.0.0"
   },
   "dependencies": {
     "assets-webpack-plugin": "3.5.1",
@@ -32,6 +33,7 @@
     "babel-preset-react": "6.23.0",
     "compression": "1.6.2",
     "css-loader": "0.27.3",
+    "css-modules-require-hook": "^4.0.6",
     "eslint-plugin-react": "6.9.0",
     "express": "4.15.2",
     "extract-text-webpack-plugin": "2.1.0",
@@ -42,6 +44,7 @@
     "react": "15.4.2",
     "react-dom": "15.4.2",
     "react-router-dom": "4.0.0",
+    "react-toolbox": "^2.0.0-beta.12",
     "rimraf": "2.6.1",
     "url-loader": "0.5.8",
     "webpack": "2.2.1",
