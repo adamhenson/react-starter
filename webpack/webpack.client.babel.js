@@ -17,13 +17,12 @@ const isProduction = process.env.NODE_ENV === 'production';
 export default {
   name: 'client',
   entry: {
-    // vendor: [
-    //   'react',
-    //   'react-dom',
-    //   'react-router',
-    //   'react-router-dom',
-    //   'react-toolbox',
-    // ],
+    vendor: [
+      'react',
+      'react-dom',
+      'react-router',
+      'react-router-dom',
+    ],
     client: [
       ...(!isProduction && ['webpack-hot-middleware/client']),
       './src/client',
@@ -118,14 +117,14 @@ export default {
     }),
     new webpack.optimize.CommonsChunkPlugin({
       // (choose the chunks, or omit for all chunks)
-      names: ['vendor'], // Webpack 'manifest' goes into 'head' entry point
+      names: 'vendor',
 
       // (with more entries, this ensures that no other module goes into the vendor chunk)
       minChunks: Infinity,
     }),
     new webpack.optimize.CommonsChunkPlugin({
       // (choose the chunks, or omit for all chunks)
-      names: ['client'],
+      names: 'client',
 
       // (use all children of the chunk)
       children: true,
