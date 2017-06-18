@@ -21,6 +21,13 @@ export default {
       ...(!isProduction && ['webpack-hot-middleware/client']),
       './src/client',
     ],
+    // vendor: [
+    //   'react',
+    //   'react-dom',
+    //   'react-router',
+    //   'react-router-dom',
+    //   'react-toolbox',
+    // ],
   },
   output: {
     ...common.output,
@@ -109,10 +116,23 @@ export default {
       allChunks: true,
       filename: `css/style${isProduction ? '.[contenthash:8]' : ''}.css`,
     }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      minChunks: ({ resource }) => /node_modules/.test(resource),
-    }),
+    // new webpack.optimize.CommonsChunkPlugin({
+    //   // (choose the chunks, or omit for all chunks)
+    //   names: 'client',
+
+    //   // (use all children of the chunk)
+    //   children: true,
+
+    //   // (create an async commons chunk)
+    //   async: true,
+
+    //   // (2 children must share the module before it's separated)
+    //   minChunks: 2,
+    // }),
+    // new webpack.optimize.CommonsChunkPlugin({
+    //   name: 'vendor',
+    //   minChunks: ({ resource }) => /node_modules/.test(resource),
+    // }),
     new WebpackMd5Hash(),
   ],
   bail: isProduction,
