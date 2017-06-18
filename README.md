@@ -10,11 +10,11 @@
 - [x] [Express](http://expressjs.com/)
 - [x] [React](http://facebook.github.io/react/)
 - [x] [React Router v4](https://github.com/reactjs/react-router)
+- [x] [React Toolbox](http://react-toolbox.com/)
 - [x] [Webpack v2](https://webpack.github.io)
 
 ### Extras
 - [x] [Apollo Client](http://dev.apollodata.com/) (separate branch: [feature/apollo](https://github.com/richardkall/react-starter/tree/feature/apollo))
-- [x] [React Toolbox](http://react-toolbox.com/) (separate branch: [feature/react-toolbox](https://github.com/adamhenson/react-starter/tree/feature/react-toolbox))
 - [x] [Redux](http://redux.js.org/) (separate branch: [feature/redux](https://github.com/richardkall/react-starter/tree/feature/redux))
 
 ## Setup
