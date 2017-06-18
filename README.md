@@ -37,6 +37,16 @@ Start production server:
 $ NODE_ENV=production npm run build && npm start
 ```
 
+## Production Build Browser Stats
+
+On first page load:
+
+<img src="assets/img/react-starter-redux-toolbox.png" style="text-align: center;" />
+
+On second page load:
+
+<img src="assets/img/react-starter-redux-toolbox--2nd-page-load.png" style="text-align: center;" />
+
 ## License
 
 MIT © [Richard Käll](https://richardkall.se)
