@@ -41,11 +41,11 @@ $ NODE_ENV=production npm run build && npm start
 
 On first page load:
 
-<img src="assets/img/react-starter-redux-toolbox.png" style="text-align: center;" />
+<img src="assets/images/react-starter-redux-toolbox.png" style="text-align: center;" />
 
 On second page load:
 
-<img src="assets/img/react-starter-redux-toolbox--2nd-page-load.png" style="text-align: center;" />
+<img src="assets/images/react-starter-redux-toolbox--2nd-page-load.png" style="text-align: center;" />
 
 ## License
 
