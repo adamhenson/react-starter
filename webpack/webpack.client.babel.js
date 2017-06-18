@@ -40,7 +40,7 @@ export default {
               options: {
                 plugins() {
                   return [
-                    postcssImport,
+                    postcssImport({}),
                     cssnext({
                       browsers: ['last 2 versions', '> 5%'],
                       features: {
