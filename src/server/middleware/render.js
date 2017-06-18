@@ -35,8 +35,7 @@ export default function render(req, res) {
           <meta content="width=device-width, initial-scale=1" name="viewport" />
           <title>React Starter</title>
           <!-- https://github.com/google/material-design-icons -->
-          <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+          <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
           <link href="${CSS_BUNDLE}" rel="stylesheet">
         </head>
         <body>
