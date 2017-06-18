@@ -4,6 +4,7 @@ import path from 'path';
 import compression from 'compression';
 import express from 'express';
 import morgan from 'morgan';
+import csshook from 'css-modules-require-hook/preset' // import hook before routes
 
 import renderMiddleware from './middleware/render';
 
