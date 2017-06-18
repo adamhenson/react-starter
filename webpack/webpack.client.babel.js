@@ -49,9 +49,6 @@ export default {
                     postcssImport({}),
                     cssnext({
                       browsers: ['last 2 versions', '> 5%'],
-                      features: {
-                        customProperties: {},
-                      },
                     }),
                   ];
                 },
