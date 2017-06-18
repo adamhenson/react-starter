@@ -19,8 +19,10 @@ export default {
     vendor: [
       'react',
       'react-dom',
+      'react-redux',
       'react-router',
       'react-router-dom',
+      'redux',
     ],
     client: [
       ...(!isProduction && ['webpack-hot-middleware/client']),
