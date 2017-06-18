@@ -1,8 +1,6 @@
 # React Starter [![Build Status](https://travis-ci.org/richardkall/react-starter.svg?branch=master)](https://travis-ci.org/richardkall/react-starter)
 
-> Starter kit for creating universal React applications. React Toolbox feature from forked repo.
-
-Note: this is a fork from [richardkall/react-starter](https://github.com/richardkall/react-starter).
+> Starter kit for creating universal React applications. React Toolbox feature forked from [richardkall/react-starter](https://github.com/richardkall/react-starter). A simple example of a universal app using the combination of React Toolbox, Webpack 2, and React Router 4.
 
 ## Features
 
