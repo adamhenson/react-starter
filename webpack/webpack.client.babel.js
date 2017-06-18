@@ -4,6 +4,7 @@ import WebpackMd5Hash from 'webpack-md5-hash';
 import webpack from 'webpack';
 import postcssImport from 'postcss-import';
 import cssnext from 'postcss-cssnext';
+import path from 'path';
 
 import common, {
   babelLoaderOptions,
@@ -53,6 +54,10 @@ export default {
             },
           ],
         }),
+        include: [
+          path.resolve(__dirname, '../src'),
+          path.resolve(__dirname, '../node_modules/react-toolbox'),
+        ],
       },
       {
         test: /\.js$/,
