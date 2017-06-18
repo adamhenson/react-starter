@@ -1,6 +1,8 @@
 # React Starter [![Build Status](https://travis-ci.org/richardkall/react-starter.svg?branch=master)](https://travis-ci.org/richardkall/react-starter)
 
-> Starter kit for creating universal React applications.
+> Starter kit for creating universal React applications. React Toolbox feature from forked repo.
+
+Note: this is a fork from [richardkall/react-starter](https://github.com/richardkall/react-starter).
 
 ## Features
 
@@ -14,6 +16,7 @@
 
 ### Extras
 - [x] [Apollo Client](http://dev.apollodata.com/) (separate branch: [feature/apollo](https://github.com/richardkall/react-starter/tree/feature/apollo))
+- [x] [React Toolbox](http://react-toolbox.com/) (separate branch: [feature/react-toolbox](https://github.com/adamhenson/react-starter/tree/feature/react-toolbox))
 - [x] [Redux](http://redux.js.org/) (separate branch: [feature/redux](https://github.com/richardkall/react-starter/tree/feature/redux))
 
 ## Setup
