@@ -17,10 +17,6 @@ const isProduction = process.env.NODE_ENV === 'production';
 export default {
   name: 'client',
   entry: {
-    client: [
-      ...(!isProduction && ['webpack-hot-middleware/client']),
-      './src/client',
-    ],
     // vendor: [
     //   'react',
     //   'react-dom',
@@ -28,6 +24,10 @@ export default {
     //   'react-router-dom',
     //   'react-toolbox',
     // ],
+    client: [
+      ...(!isProduction && ['webpack-hot-middleware/client']),
+      './src/client',
+    ],
   },
   output: {
     ...common.output,
@@ -116,23 +116,26 @@ export default {
       allChunks: true,
       filename: `css/style${isProduction ? '.[contenthash:8]' : ''}.css`,
     }),
-    // new webpack.optimize.CommonsChunkPlugin({
-    //   // (choose the chunks, or omit for all chunks)
-    //   names: 'client',
+    new webpack.optimize.CommonsChunkPlugin({
+      // (choose the chunks, or omit for all chunks)
+      names: ['vendor'], // Webpack 'manifest' goes into 'head' entry point
 
-    //   // (use all children of the chunk)
-    //   children: true,
+      // (with more entries, this ensures that no other module goes into the vendor chunk)
+      minChunks: Infinity,
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      // (choose the chunks, or omit for all chunks)
+      names: ['client'],
 
-    //   // (create an async commons chunk)
-    //   async: true,
+      // (use all children of the chunk)
+      children: true,
 
-    //   // (2 children must share the module before it's separated)
-    //   minChunks: 2,
-    // }),
-    // new webpack.optimize.CommonsChunkPlugin({
-    //   name: 'vendor',
-    //   minChunks: ({ resource }) => /node_modules/.test(resource),
-    // }),
+      // (create an async commons chunk)
+      async: true,
+
+      // (2 children must share the module before it's separated)
+      minChunks: 2,
+    }),
     new WebpackMd5Hash(),
   ],
   bail: isProduction,
