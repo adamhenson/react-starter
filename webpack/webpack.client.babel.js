@@ -4,6 +4,7 @@ import WebpackMd5Hash from 'webpack-md5-hash';
 import webpack from 'webpack';
 import postcssImport from 'postcss-import';
 import cssnext from 'postcss-cssnext';
+import cssnextVariables from './cssnextVariables';
 
 import common, {
   babelLoaderOptions,
@@ -49,6 +50,11 @@ export default {
                     postcssImport({}),
                     cssnext({
                       browsers: ['last 2 versions', '> 5%'],
+                      features: {
+                        customProperties: {
+                          variables: cssnextVariables,
+                        },
+                      },
                     }),
                   ];
                 },
